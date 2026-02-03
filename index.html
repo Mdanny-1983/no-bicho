@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Bicho - Control de Plagas Profesional</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+</head>
+<body>
+
+    <a href="https://wa.me/5493445454896" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpg" alt="No Bicho Logo" class="main-logo"> 
+                <span class="logo-text">No Bicho!</span>
+            </div>
+            <a href="#reservas" class="btn-turno">RESERVAR CITA</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Soluciones integrales contra plagas</h1>
+        <p>Protegemos hogares, comercios e industrias con certificación profesional.</p>
+    </header>
+
+    <main>
+        <section class="section">
+            <h3>Quiénes Somos</h3>
+            <div class="sobre-nosotros">
+                <p>En <strong>No Bicho</strong>, brindamos seguridad ambiental en domicilios particulares, establecimientos comerciales y plantas industriales.</p>
+                <p style="margin-top: 10px;">Contamos con los protocolos necesarios para cumplir con las normativas de sanidad vigentes en Rosario del Tala y la zona.</p>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <h3>Plagas que controlamos</h3>
+            <div class="grid-plagas">
+                <div class="plaga-card"><i class="fas fa-bug"></i><br>Cucarachas</div>
+                <div class="plaga-card"><i class="fas fa-biohazard"></i><br>Roedores</div>
+                <div class="plaga-card"><i class="fas fa-spider"></i><br>Arañas-Hormigas</div> 
+                <div class="plaga-card"><i class="fas fa-wind"></i><br>Mosquitos</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h3>Por qué elegirnos</h3>
+            <div class="grid-beneficios">
+                <div class="beneficio-item">
+                    <span class="icon-beneficio"><i class="fas fa-shield-alt"></i></span>
+                    <h4>Garantía Total</h4>
+                    <p>Si la plaga vuelve antes de los 30 días, nosotros también.</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="icon-beneficio"><i class="fas fa-paw"></i></span>
+                    <h4>Pet Friendly</h4>
+                    <p>Productos seguros para tus animales y plantas.</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="icon-beneficio"><i class="fas fa-file-contract"></i></span>
+                    <h4>Certificado</h4>
+                    <p>Documentación técnica para comercios e industrias.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section bg-light">
+            <h3>Galería de Trabajos</h3>
+            <div class="galeria" id="galeriaAuto">
+                <img src="foto1.jpg" alt="Trabajo">
+                <img src="foto2.jpg" alt="Trabajo">
+                <img src="foto3.jpg" alt="Trabajo">
+                <img src="foto4.jpg" alt="Trabajo">
+                <img src="foto5.jpg" alt="Trabajo">
+				<img src="foto6.jpg" alt="Trabajo">
+				<img src="foto7.jpg" alt="Trabajo">
+				<img src="foto8.jpg" alt="Trabajo">
+				<img src="foto9.jpg" alt="Trabajo">
+				<img src="foto10.jpg" alt="Trabajo">
+				<img src="foto11.jpg" alt="Trabajo">
+				
+				
+            </div>
+        </section>
+
+        <section class="section" id="reservas">
+            <h3>Presupuesto Sin Cargo</h3>
+            <form id="reservaForm">
+                <div class="form-group">
+                    <label>Tipo de Cliente</label>
+                    <select id="propiedad" required>
+                        <option value="Hogar">Hogar</option>
+                        <option value="Comercio">Comercio / Gastronomía</option>
+                        <option value="Industria">Industria / Depósito</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Metros² aproximados</label>
+                    <input type="number" id="metros" placeholder="Ej: 100" required>
+                </div>
+                <div class="form-group">
+                    <label>Plaga</label>
+                    <select id="plaga" required>
+                        <option value="Cucarachas">Cucarachas</option>
+                        <option value="Roedores">Roedores</option>
+                        <option value="Hormigas">Hormigas</option>
+                        <option value="Otra">Otra / Preventivo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Fecha sugerida</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <button type="submit" class="btn-submit">SOLICITAR POR WHATSAPP</button>
+            </form>
+        </section>
+
+        <section class="section bg-light">
+            <h3>Testimonios</h3>
+            <div class="testimonial-container">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Excelente servicio, muy puntuales y el problema de las ratas desapareció por completo."</p>
+                    <hr>
+                    <strong>Juan</strong>
+                    <span>Encargado de cría intensiva</span>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Excelente servicio, 10 de 10. Muy profesionales con la documentación."</p>
+                    <hr>
+                    <strong>Transporte MOSTTO</strong>
+                    <span>Establecimiento Logístico</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>No Bicho</h2>
+            <p>📍 Rosario Del Tala y alrededores</p>
+            <p>⏰ Lunes a Sábados 07:00 - 20:00</p>
+			<p>📍 José Echazarreta - Profesional Matriculado</p>
+            <p class="copyright">© 2026 No Bicho - Control de Plagas.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

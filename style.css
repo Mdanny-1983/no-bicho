@@ -1,0 +1,267 @@
+﻿/* 1. VARIABLES Y CONFIGURACIÓN BASE */
+:root {
+    --verde-limpio: #2D6A4F;
+    --verde-claro: #95D5B2;
+    --verde-principal: #40916c; /* Para acentos */
+    --blanco: #ffffff;
+    --oscuro: #1B4332;
+    --gris-suave: #F8F9FA;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background: var(--blanco); 
+    color: var(--oscuro); 
+    line-height: 1.6; 
+}
+
+/* 2. NAVEGACIÓN Y LOGO INTEGRADO */
+nav {
+    background: var(--verde-limpio);
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.main-logo {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Logo Circular */
+    border: 2px solid rgba(255,255,255,0.3);
+    background: white;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2));
+    transition: all 0.3s ease;
+}
+
+.logo-text {
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.btn-turno {
+    background: var(--verde-claro);
+    color: var(--oscuro);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+}
+
+.btn-turno:hover { transform: scale(1.05); }
+
+/* 3. HERO (CON TU FOTO PERSONAL) */
+.hero {
+    padding: 6rem 1.5rem;
+    text-align: center;
+    /* Reemplaza 'mifoto.jpg' por el nombre de tu archivo */
+    background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(27, 67, 50, 0.8)), 
+                url('mifoto.jpg') center/cover;
+    color: white;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+
+/* 4. SECCIONES Y GRIDS */
+.section { padding: 4rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+.bg-light { background: var(--gris-suave); max-width: 100%; }
+
+h3 { 
+    margin-bottom: 2rem; 
+    border-left: 5px solid var(--verde-claro); 
+    padding-left: 15px; 
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.grid-plagas, .grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.plaga-card, .beneficio-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.plaga-card:hover { transform: translateY(-5px); }
+
+.plaga-card i, .icon-beneficio i {
+    font-size: 2.5rem;
+    color: var(--verde-limpio);
+    margin-bottom: 15px;
+}
+
+/* 5. GALERÍA PROFESIONAL */
+.galeria {
+    padding: 20px 0;
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Oculta scroll en Firefox */
+}
+
+.galeria::-webkit-scrollbar { display: none; } /* Oculta scroll en Chrome */
+
+.galeria img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+    border: 4px solid white; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    transition: all 0.4s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+    border-color: var(--verde-claro);
+}
+
+/* 6. TESTIMONIOS (TARJETAS) */
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+    flex: 1;
+    min-width: 300px;
+    max-width: 480px;
+    border-top: 5px solid var(--verde-claro);
+}
+
+.quote-icon { color: var(--verde-claro); font-size: 1.8rem; opacity: 0.4; margin-bottom: 10px; }
+
+/* 7. FORMULARIO */
+#reservaForm {
+    background: var(--gris-suave);
+    padding: 2.5rem;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group { margin-bottom: 1.5rem; text-align: left; }
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus { border-color: var(--verde-limpio); }
+
+.btn-submit {
+    background: var(--verde-limpio);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    width: 100%;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover { background: var(--oscuro); }
+
+/* 8. WHATSAPP FLOTANTE */
+.whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    z-index: 9999;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    animation: pulse-wa 2s infinite;
+}
+
+@keyframes pulse-wa {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* 9. FOOTER */
+.footer {
+    background: var(--oscuro);
+    color: white;
+    padding: 4rem 1.5rem 2rem;
+    text-align: center;
+}
+
+.footer-social a {
+    color: var(--verde-claro);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    opacity: 0.5;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 1.8rem; }
+    .grid-plagas { grid-template-columns: 1fr; }
+    .galeria img { width: 250px; height: 180px; }
+}
