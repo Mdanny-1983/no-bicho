@@ -20,27 +20,31 @@ document.addEventListener('DOMContentLoaded', () => {
     galeria.addEventListener('pointerleave', () => isPaused = false);
 
     // 2. Envío de Formulario a WhatsApp
-    const form = document.getElementById('reservaForm');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const telefono = "5493445454896";
-        const datos = {
-            tipo: document.getElementById('propiedad').value,
-            m2: document.getElementById('metros').value,
-            plaga: document.getElementById('plaga').value,
-            fecha: document.getElementById('fecha').value
-        };
+    const formulario = document.querySelector('#reservaForm');
 
-        const mensaje = `Hola No Bicho! ??%0AQuisiera un presupuesto:%0A%0A` +
-                        `?? *Tipo:* ${datos.tipo}%0A` +
-                        `?? *M2:* ${datos.m2}%0A` +
-                        `?? *Plaga:* ${datos.plaga}%0A` +
-                        `?? *Fecha:* ${datos.fecha}`;
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-        window.open(`https://wa.me/${telefono}?text=${mensaje}`, '_blank');
-    });
+    // Captura de datos
+    const propiedad = document.getElementById('propiedad').value;
+    const metros = document.getElementById('metros').value;
+    const plaga = document.getElementById('plaga').value;
+    const fecha = document.getElementById('fecha').value;
+    const telefono = "5493445454896";
 
+    // Creamos el mensaje con saltos de línea (\n) y emojis
+    const mensaje = `Hola No Bicho! \Quisiera un presupuesto:\n\n` +
+                    ` Tipo: ${propiedad}\n` +
+                    ` M2: ${metros}\n` +
+                    ` Plaga: ${plaga}\n` +
+                    ` Fecha: ${fecha}`;
+
+    // LA CLAVE: Usar encodeURIComponent para limpiar el texto
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    
+    // Abrir WhatsApp
+    window.open(`https://wa.me/${5493445454896}?text=${mensajeCodificado}`, '_blank');
+});
     // 3. Fecha mínima = Hoy
     const inputFecha = document.getElementById('fecha');
     if(inputFecha) {
